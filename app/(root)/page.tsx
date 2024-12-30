@@ -1,6 +1,20 @@
 import SearchForm from "@/components/SearchForm";
 import StartupCard from "@/components/StartupCard";
 
+interface StartupCardType {
+  _createdAt: Date;
+  views: number;
+  author: {
+    _id: number;
+    name: string;
+  };
+  _id: number;
+  description: string;
+  image: string;
+  category: string;
+  title: string;
+}
+
 export default async function Home({searchParams}: {
   searchParams: Promise<{query?: string}>;
 }) {
