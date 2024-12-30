@@ -1,14 +1,14 @@
 # StartSync
 
-StartSync is a dynamic, real-time platform designed for entrepreneurs and startups to share their pitches effortlessly. By submitting their business or startup details through our intuitive interface, users can see their pitches instantly showcased on the homepage without the need for page reloads. This seamless experience is powered by cutting-edge technologies, ensuring speed, security, and responsiveness.
+StartSync is a practice project designed to help entrepreneurs and startups share their pitches dynamically in real time. By submitting their business or startup details through an intuitive interface, users can see their pitches instantly showcased on the homepage without the need for page reloads. This project focuses on learning and experimenting with modern web development technologies.
 
 ## Features
 
-- **Submit Your Pitch**: Entrepreneurs can easily submit their business or startup details via a user-friendly form.
-- **Real-Time Updates**: Submitted pitches are displayed on the homepage dynamically, eliminating the need for reloading.
-- **Authentication**: Secure and seamless user authentication using NextAuth.js.
-- **Modern UI/UX**: A clean, responsive design built with Tailwind CSS and ShadCn components.
-- **Schema Validation**: Robust input validation and schema handling with Zod.
+- **Submit Your Pitch**: Practice implementing a form for submitting business or startup details.
+- **Real-Time Updates**: Experiment with dynamic updates to the homepage without reloading.
+- **Authentication**: Explore secure and seamless user authentication using NextAuth.js.
+- **Modern UI/UX**: Create a clean, responsive design using Tailwind CSS and ShadCn components.
+- **Schema Validation**: Practice robust input validation and schema handling with Zod.
 
 ## Tech Stack
 
@@ -24,7 +24,7 @@ StartSync is a dynamic, real-time platform designed for entrepreneurs and startu
 1. **Clone the Repository**:
 
    ```bash
-   git clone https://github.com/your-username/startsync.git
+   git clone https://github.com/visy-ani/startsync.git
    cd startsync
    ```
 
@@ -53,15 +53,15 @@ StartSync is a dynamic, real-time platform designed for entrepreneurs and startu
    SANITY_API_VERSION=your-sanity-api-version
    ```
 
-5. **Update \*\*\*\*\*\*\*\*\*\*\*\*****`package.json`**:
+5. **Update ****`package.json`**:
    Ensure compatibility with pnpm and React 19 by configuring the package manager and overrides:
 
    ```json
    {
      "packageManager": "pnpm@10.5.2",
      "overrides": {
-       "react": "$react",
-       "react-dom": "$react-dom"
+       "react": "$19.0.0",
+       "react-dom": "$19.0.0"
      }
    }
    ```
@@ -90,16 +90,11 @@ startsync/
 
 ## Contributing
 
-We welcome contributions to StartSync! To contribute:
+This is a practice project, so contributions are not expected. However, feel free to fork the repository and experiment with it on your own.
 
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix.
-3. Commit your changes and push the branch.
-4. Open a pull request, and we'll review it as soon as possible.
+## Disclaimer
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is for learning and experimentation purposes only. No license is provided. If you wish to use or build upon this project, please contact the author for permission.
 
 ## Acknowledgements
 
@@ -116,9 +111,9 @@ If you have any questions or suggestions, feel free to reach out:
 
 **Anish Yadav**\
 Email: [chocoboyanish566@gmail.com](mailto\:chocoboyanish566@gmail.com)\
-GitHub: visy-ani
+GitHub: [visy-ani](https://github.com/visy-ani)
 
 ---
 
-Enjoy using StartSync! Together, let's empower entrepreneurs and startups to shine.
+Enjoy experimenting with StartSync and have fun learning!
 
