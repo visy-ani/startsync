@@ -24,7 +24,7 @@ StartSync is a practice project designed to help entrepreneurs and startups shar
 1. **Clone the Repository**:
 
    ```bash
-   git clone https://github.com/visy-ani/startsync.git
+   git clone https://github.com/your-username/startsync.git
    cd startsync
    ```
 
@@ -53,15 +53,15 @@ StartSync is a practice project designed to help entrepreneurs and startups shar
    SANITY_API_VERSION=your-sanity-api-version
    ```
 
-5. **Update ****`package.json`**:
+5. **Update \*\*\*\*\*\*\*\*****`package.json`**:
    Ensure compatibility with pnpm and React 19 by configuring the package manager and overrides:
 
    ```json
    {
      "packageManager": "pnpm@10.5.2",
      "overrides": {
-       "react": "$19.0.0",
-       "react-dom": "$19.0.0"
+       "react": "$react",
+       "react-dom": "$react-dom"
      }
    }
    ```
@@ -84,9 +84,94 @@ startsync/
 ├── sanity/            # Sanity CMS configuration
 ├── utils/             # Utility functions and helpers
 ├── validations/       # Zod schemas for input validation
+├── lib/               # Query definitions and client utilities
 ├── public/            # Static assets
 └── .env.local         # Environment variables
 ```
+
+## What I Learned
+
+1. **Authentication in Next.js**:
+   Implemented secure user authentication using NextAuth.js, exploring session handling and provider integration.
+
+2. **Defining Schemas in Sanity**:
+   Learned to define and structure schemas for content management. Example:
+
+   ```javascript
+   export const author = defineType({
+       name: "author",
+       title: "Author",
+       type: "document",
+       icon: UserIcon,
+       fields: [
+           defineField({ name: "id", type: "number" }),
+           defineField({ name: "name", type: "string" }),
+           defineField({ name: "username", type: "string" }),
+           defineField({ name: "email", type: "string" }),
+           defineField({ name: "image", type: "url" }),
+           defineField({ name: "bio", type: "text" }),
+       ],
+       preview: {
+           select: {
+               title: "name",
+           },
+       },
+   });
+   ```
+
+3. **Sanity Content Management**:
+
+   - Used GROQ (Sanity's open-source query language) to fetch data efficiently.
+
+   - Visualized and tested queries in Sanity Vision.
+
+   - Defined queries in a dedicated file for better structure:
+
+     ```javascript
+     import { defineQuery } from "next-sanity";
+
+     export const STARTUPS_QUERY = defineQuery(`*[_type == "startup" && defined(slug.current)] | order(_createdAt desc){
+         id,
+         title,
+         slug,
+         _createdAt,
+         author -> {
+           _id, name, image, bio
+         },
+         views,
+         description,
+         category,
+         image
+     }`);
+     ```
+
+   - Fetched posts in a single line using the client:
+
+     ```javascript
+     const posts = await client.fetch(STARTUPS_QUERY);
+     ```
+
+   - Automated type safety using Sanity Typegen to ensure consistency and reliability.
+
+4. **Configuring Fonts and Images in Next.js**:
+   Learned to customize fonts by defining local fonts. Example:
+
+   ```javascript
+   const workSans = localFont({
+     src: [
+       { path: './fonts/WorkSans-Black.ttf', weight: '900', style: 'normal' },
+       { path: './fonts/WorkSans-ExtraBold.ttf', weight: '800', style: 'normal' },
+       { path: './fonts/WorkSans-Bold.ttf', weight: '700', style: 'normal' },
+       { path: './fonts/WorkSans-SemiBold.ttf', weight: '600', style: 'normal' },
+       { path: './fonts/WorkSans-Medium.ttf', weight: '500', style: 'normal' },
+       { path: './fonts/WorkSans-Regular.ttf', weight: '400', style: 'normal' },
+       { path: './fonts/WorkSans-Thin.ttf', weight: '300', style: 'normal' },
+       { path: './fonts/WorkSans-Light.ttf', weight: '200', style: 'normal' },
+       { path: './fonts/WorkSans-ExtraLight.ttf', weight: '100', style: 'normal' },
+     ],
+     variable: '--font-work-sans',
+   });
+   ```
 
 ## Contributing
 
@@ -100,7 +185,7 @@ This project is for learning and experimentation purposes only. No license is pr
 
 - [Next.js](https://nextjs.org/)
 - [Sanity](https://www.sanity.io/)
-- [Zod](https://zod.dev/)
+- Typegen
 - [Tailwind CSS](https://tailwindcss.com/)
 - [ShadCn Components](https://shadcn.dev/)
 - [NextAuth.js](https://next-auth.js.org/)
