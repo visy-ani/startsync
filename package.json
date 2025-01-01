@@ -7,20 +7,22 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "predev": "npm run typegen",
-    "prebuild": "npm run typegen",
+    "predev": "pnpm run typegen",
+    "prebuild": "pnpm run typegen",
     "typegen": "sanity schema extract --path=./sanity/extract.json && sanity typegen generate"
   },
   "packageManager": "pnpm@9.15.2",
   "overrides": {
     "react": "$react",
-    "react-dom": "$react-dom"
+    "react-dom": "$react-dom",
+    "next": "$next"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.1",
     "@radix-ui/react-toast": "^1.2.4",
     "@sanity/image-url": "1",
     "@sanity/vision": "3",
+    "@sentry/nextjs": "8",
     "@tailwindcss/typography": "^0.5.15",
     "@uiw/react-md-editor": "^4.0.5",
     "class-variance-authority": "^0.7.1",
