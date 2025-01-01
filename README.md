@@ -9,6 +9,7 @@ StartSync is a practice project designed to help entrepreneurs and startups shar
 - **Authentication**: Explore secure and seamless user authentication using NextAuth.js.
 - **Modern UI/UX**: Create a clean, responsive design using Tailwind CSS and ShadCn components.
 - **Schema Validation**: Practice robust input validation and schema handling with Zod.
+- **Markdown Editing**: Implemented react-md-editor to allow users to format their pitches using Markdown syntax.
 
 ## Tech Stack
 
@@ -18,6 +19,7 @@ StartSync is a practice project designed to help entrepreneurs and startups shar
 - **Tailwind CSS**: Utility-first CSS framework for modern and responsive styling.
 - **ShadCn**: A component library for consistent and reusable UI elements.
 - **NextAuth.js**: Authentication library for secure user login and session management.
+- **@uiw/react-md-editor**: A Markdown editor that enables users to format text easily when submitting pitches.
 
 ## Installation and Setup
 
