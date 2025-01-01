@@ -14,6 +14,7 @@ StartSync is a practice project designed to help entrepreneurs and startups shar
 ## Tech Stack
 
 - **Next.js**: Framework for building a fast, scalable, and secure web application. It was used as the backbone for the project, providing features like server-side rendering, API routes, and optimized performance.
+- **TypeScript**: Used for static typing to improve code reliability and maintainability.
 - **Sanity**: A headless CMS for managing and structuring startup details dynamically. It enabled efficient data querying with GROQ and automated type safety using Sanity Typegen.
 - **Zod**: Schema-based validation library used to ensure robust input validation for all user-provided data.
 - **Tailwind CSS**: Utility-first CSS framework for building modern, responsive, and visually appealing interfaces.
@@ -147,7 +148,7 @@ StartSync is a practice project designed to help entrepreneurs and startups shar
      const posts = await client.fetch(STARTUPS_QUERY);
      ```
 
-   - Automated type safety using Sanity Typegen to ensure consistency and reliability.
+   - Automated type safety using [Sanity Typegen](https://www.sanity.io/learn/course/content-driven-web-application-foundations/generate-typescript-types) to ensure consistency and reliability.
 
 4. **Configuring Fonts and Images in Next.js**:
    Learned to customize fonts by defining local fonts. Example:
@@ -169,6 +170,15 @@ StartSync is a practice project designed to help entrepreneurs and startups shar
    });
    ```
 
+5. **Using Sentry for Monitoring**:
+   Gained experience in using Sentry for monitoring real-time bugs or errors that occur during production. Learned how to raise tickets on Jira or GitHub, fix them, and monitor web analytics.
+
+6. **Custom TailwindCSS Classes**:
+   Learned how to make and manage custom TailwindCSS classes effectively for advanced styling needs.
+
+7. **ShadCn Efficiency**:
+   Improved proficiency in using ShadCn components more efficiently for creating consistent and reusable UI.
+
 ## Contributing
 
 This is a practice project, so contributions are not expected. However, feel free to fork the repository and experiment with it on your own.
@@ -181,11 +191,8 @@ This project is for learning and experimentation purposes only. No license is pr
 
 - [Next.js](https://nextjs.org/)
 - [Sanity](https://www.sanity.io/)
-- Typegen
+- [Typegen](https://www.sanity.io/learn/course/content-driven-web)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [ShadCn Components](https://shadcn.dev/)
 - [NextAuth.js](https://next-auth.js.org/)
-
-## Contact
-
-If you have any questions or suggestions
+- [MarkDown-Package](https://www.npmjs.com/package/@uiw/react-md-editor)
