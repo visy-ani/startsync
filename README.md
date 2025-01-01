@@ -13,13 +13,23 @@ StartSync is a practice project designed to help entrepreneurs and startups shar
 
 ## Tech Stack
 
-- **Next.js**: Framework for building a fast, scalable, and secure web application.
-- **Sanity**: CMS to manage and structure startup details dynamically.
-- **Zod**: For schema-based validation of user inputs.
-- **Tailwind CSS**: Utility-first CSS framework for modern and responsive styling.
-- **ShadCn**: A component library for consistent and reusable UI elements.
-- **NextAuth.js**: Authentication library for secure user login and session management.
-- **@uiw/react-md-editor**: A Markdown editor that enables users to format text easily when submitting pitches.
+- **Next.js**: Framework for building a fast, scalable, and secure web application. It was used as the backbone for the project, providing features like server-side rendering, API routes, and optimized performance.
+- **Sanity**: A headless CMS for managing and structuring startup details dynamically. It enabled efficient data querying with GROQ and automated type safety using Sanity Typegen.
+- **Zod**: Schema-based validation library used to ensure robust input validation for all user-provided data.
+- **Tailwind CSS**: Utility-first CSS framework for building modern, responsive, and visually appealing interfaces.
+- **ShadCn Components**: A component library for consistent and reusable UI elements, enhancing the overall design and development efficiency.
+- **NextAuth.js**: Authentication library used to implement secure user login, session management, and integration with different providers.
+- **@uiw/react-md-editor**: Markdown editor integrated for users to format their pitches easily.
+- **@radix-ui/react-avatar**: Used for creating customizable and accessible user avatars in the UI.
+- **@radix-ui/react-toast**: Used for displaying non-intrusive, customizable toast notifications for better user feedback.
+- **markdown-it**: A Markdown parser used to render Markdown content as HTML dynamically.
+- **lucide-react**: Icon library providing scalable and customizable icons used throughout the application.
+- **styled-components**: A CSS-in-JS library for building styled React components with dynamic theming.
+- **clsx**: A utility for conditionally combining class names, improving readability and maintainability of dynamic classes.
+- **tailwind-merge**: Used to merge conflicting Tailwind CSS class utilities dynamically.
+- **sanity-plugin-markdown**: Enabled Markdown support directly within Sanity CMS, streamlining content formatting and editing.
+- **@tailwindcss/typography**: Tailwind plugin for enhanced styling of Markdown-generated content.
+- **Sentry**: Integrated for monitoring and debugging production-level errors effectively.
 
 ## Installation and Setup
 
@@ -53,9 +63,10 @@ StartSync is a practice project designed to help entrepreneurs and startups shar
    SANITY_PROJECT_ID=your-sanity-project-id
    SANITY_DATASET=your-sanity-dataset
    SANITY_API_VERSION=your-sanity-api-version
+   SENTRY_DSN=your-sentry-dsn
    ```
 
-5. **Update \*\*\*\*\*\*\*\*****`package.json`**:
+5. **Update `package.json`**:
    Ensure compatibility with pnpm and React 19 by configuring the package manager and overrides:
 
    ```json
@@ -75,21 +86,6 @@ StartSync is a practice project designed to help entrepreneurs and startups shar
    ```
 
    Your application will be running at `http://localhost:3000`.
-
-## Project Structure
-
-```
-startsync/
-├── components/        # Reusable UI components
-├── pages/             # Next.js pages
-├── styles/            # Tailwind CSS styles
-├── sanity/            # Sanity CMS configuration
-├── utils/             # Utility functions and helpers
-├── validations/       # Zod schemas for input validation
-├── lib/               # Query definitions and client utilities
-├── public/            # Static assets
-└── .env.local         # Environment variables
-```
 
 ## What I Learned
 
@@ -124,9 +120,7 @@ startsync/
 3. **Sanity Content Management**:
 
    - Used GROQ (Sanity's open-source query language) to fetch data efficiently.
-
    - Visualized and tested queries in Sanity Vision.
-
    - Defined queries in a dedicated file for better structure:
 
      ```javascript
@@ -194,13 +188,4 @@ This project is for learning and experimentation purposes only. No license is pr
 
 ## Contact
 
-If you have any questions or suggestions, feel free to reach out:
-
-**Anish Yadav**\
-Email: [chocoboyanish566@gmail.com](mailto\:chocoboyanish566@gmail.com)\
-GitHub: [visy-ani](https://github.com/visy-ani)
-
----
-
-Enjoy experimenting with StartSync and have fun learning!
-
+If you have any questions or suggestions
