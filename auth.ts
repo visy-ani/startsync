@@ -5,7 +5,19 @@ import { client } from "@/sanity/lib/client";
 import { writeClient } from "@/sanity/lib/write-client";
 
 const authConfig = {
-  providers: [GitHub],
+  providers: [
+    GitHub({
+      clientId: process.env.GITHUB_CLIENT_ID,
+      clientSecret: process.env.GITHUB_CLIENT_SECRET,
+      authorization: {
+        url: `https://github.com/login/oauth/authorize`,
+        params: {
+          scope: "read:user user:email",
+          redirect_uri: process.env.GITHUB_REDIRECT_URI,
+        },
+      },
+    }),
+  ],
   callbacks: {
     async signIn({
       user: { name, email, image },
