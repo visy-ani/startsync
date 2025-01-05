@@ -17,7 +17,7 @@ const authConfig = {
         .fetch(AUTHOR_BY_GITHUB_ID_QUERY, {
           id,
         });
-        
+
       if (!existingUser) {
         await writeClient.create({
           _type: "author",

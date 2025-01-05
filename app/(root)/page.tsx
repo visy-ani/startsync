@@ -2,7 +2,6 @@ import SearchForm from "@/components/SearchForm";
 import StartupCard, { StartupTypeCard } from "@/components/StartupCard";
 import { STARTUPS_QUERY } from "@/sanity/lib/queries";
 import { sanityFetch, SanityLive } from "@/sanity/lib/live";
-import { auth } from "@/auth";
 
 export default async function Home({
   searchParams,
@@ -12,10 +11,6 @@ export default async function Home({
   const query = (await searchParams).query;
   const params = { search: query || null };
 
-  const session = await auth();
-
-  console.log(session?.id);
-  console.log('Redirect URI used for GitHub:', process.env.GITHUB_REDIRECT_URI);
 
   const { data: posts } = await sanityFetch({ query: STARTUPS_QUERY, params });
 
