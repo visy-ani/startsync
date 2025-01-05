@@ -98,7 +98,7 @@
     }
 
     .pink_container {
-        @apply w-full bg-primary min-h-[530px] pattern flex justify-center items-center flex-col py-10 px-6;
+        @apply w-full bg-primary min-h-[530px] flex justify-center items-center flex-col py-10 px-6;
     }
 
     .tag {
@@ -106,8 +106,10 @@
     }
 
     .heading {
-        @apply uppercase bg-black px-6 py-3 font-work-sans font-extrabold text-white sm:text-[54px] sm:leading-[64px] text-[36px] leading-[46px] max-w-5xl text-center my-5;
+        @apply font-work-sans font-extrabold text-white sm:text-[54px] sm:leading-[64px] text-[36px] leading-[46px] text-center;
     }
+    
+    
 
     .sub-heading {
         @apply font-medium text-[20px] text-white max-w-2xl text-center break-words;
@@ -183,28 +185,29 @@
 
     /* startupcard */
     .startup-card {
-        @apply bg-white border-[5px] border-black py-6 px-5 rounded-[22px] shadow-200 hover:border-primary hover:bg-[hsl(var(--primary)_/_0.1)] hover:shadow-300 transition-all duration-500;
+        @apply bg-white border-[4px] border-black py-6 px-5 rounded-[22px] shadow-lg hover:border-primary hover:bg-[hsl(var(--primary)_/_0.1)] hover:shadow-xl transition-transform duration-300 ease-in-out transform hover:-translate-y-2;
     }
-
+    
     .startup-card_date {
-        @apply font-medium text-[16px] bg-primary-100 px-4 py-2 rounded-full group-hover:bg-white-100;
+        @apply font-medium text-[14px] bg-primary-100 px-3 py-2 rounded-full text-primary border border-primary shadow-sm group-hover:bg-primary group-hover:text-white transition-all duration-300;
     }
-
+    
     .startup-card_desc {
-        @apply font-normal text-[16px] line-clamp-2 my-3 text-black-100 break-all;
+        @apply font-normal text-[15px] line-clamp-3 my-3 text-gray-600 break-words leading-relaxed;
     }
-
+    
     .startup-card_img {
-        @apply w-full h-[164px] rounded-[10px] object-cover;
+        @apply w-full h-[180px] rounded-[12px] object-cover border border-gray-200 shadow-md;
     }
-
+    
     .startup-card_btn {
-        @apply rounded-full bg-black-200 font-medium text-[16px] text-white px-5 py-3 !important;
+        @apply rounded-full bg-black font-semibold text-[14px] text-white px-6 py-3 hover:bg-primary hover:text-black transition-all duration-300 shadow-md hover:shadow-lg;
     }
-
+    
     .startup-card_skeleton {
-        @apply w-full h-96 rounded-[22px] bg-zinc-400;
+        @apply w-full h-96 rounded-[22px] bg-gray-300 animate-pulse;
     }
+    
 
     /* startupform */
     .startup-form {
@@ -248,18 +251,29 @@
         @apply font-medium text-[16px] bg-primary-100 px-4 py-2 rounded-full;
     }
 
-    .pattern {
-        background-image: linear-gradient(
-                to right,
-                transparent 49.5%,
-                rgba(251, 232, 67, 0.2) 49.5%,
-                rgba(251, 232, 67, 0.6) 50.5%,
-                transparent 50.5%
+    /* .pattern {
+        background: repeating-linear-gradient(
+            135deg, 
+            rgba(251, 232, 67, 0.2) 0px,
+            rgba(251, 232, 67, 0.2) 10px,
+            rgba(251, 232, 67, 0.5) 10px,
+            rgba(251, 232, 67, 0.5) 20px
         );
-        background-size: 5.25% 100%;
-        background-position: center;
-        background-repeat: repeat-x;
+        background-size: 200% 200%;
+        animation: wave-pattern 5s ease-in-out infinite; 
     }
+
+    @keyframes wave-pattern {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    } */
 
     .tag-tri {
         @apply before:content-[''] before:absolute before:top-2 before:left-2 before:border-t-[10px] before:border-t-black before:border-r-[10px] before:border-r-transparent after:content-[''] after:absolute after:bottom-2 after:right-2 after:border-b-[10px] after:border-b-black after:border-l-[10px] after:border-l-transparent;

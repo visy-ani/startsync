@@ -15,6 +15,7 @@ export default async function Home({
   const session = await auth();
 
   console.log(session?.id);
+  console.log('Redirect URI used for GitHub:', process.env.GITHUB_REDIRECT_URI);
 
   const { data: posts } = await sanityFetch({ query: STARTUPS_QUERY, params });
 
